@@ -1,0 +1,45 @@
+<?import javafx.scene.layout.AnchorPane?><?import FighterMan.View?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.ImageView?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="FighterMan.Controller"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <BorderPane prefHeight="50" style="-fx-background-color: #0B5091; -fx-padding: 5px, 5px, 5px, 5px" >
+            <left><Label fx:id="scoreLabel" style="-fx-font-size: 100%; -fx-text-fill: white" /></left>
+            <center><Label fx:id="alertLabel" style="-fx-font-size: 150%; -fx-text-fill: white"/></center>
+            <right><Label fx:id="messageLabel" style="-fx-font-size: 100%; -fx-text-fill: white"/></right>
+
+        </BorderPane>
+    </top>
+
+    <center>
+        <StackPane>
+            <ImageView fx:id="boardImageView" AnchorPane.leftAnchor="125" AnchorPane.topAnchor="200">
+                <image><Image url="/res/2D_Board.png" /></image>
+            </ImageView>
+            <View fx:id="view" rowCount="10" columnCount="10"/>
+        </StackPane>
+
+    </center>
+
+    <bottom>
+        <HBox prefHeight="50" style="-fx-padding: 10px, 5px, 10px, 5px; -fx-background-color: #F3B61D">
+            <Label style="-fx-font-size: 140%; -fx-text-fill: white"
+                   text="Move: W A S D or Arrow Keys/ Attack (Dist = 2): E / SpA (Dist = 1): F / Range (Dist = 3): R / End Turn: Q / New game: G" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
+
